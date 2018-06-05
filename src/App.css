@@ -2,3 +2,15 @@
   padding: 0px;
   margin: 0px;
 }
+
+.card{
+  -moz-box-shadow:    0px 0px 3px 4px #ccc;
+  -webkit-box-shadow: 0px 0px 3px 4px #ccc;
+  box-shadow:         0px 0px 3px 4px #ccc;
+  margin-bottom: 5vh; 
+}
+
+.card image{
+  height: 20vw;
+  width: 100%;
+}

@@ -6,9 +6,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Hello World</h1>
-        <Products />
+      <div className="container App">
+        <div className="row">
+          <Products />
+        </div>
       </div>
     );
   }
