@@ -70,9 +70,9 @@ class Categories extends Component {
                         )
                     })
 
-                    console.log("categories: ", categoriesArray)
+                    // console.log("categories: ", categoriesArray)
                     this.setState({ categories: categoriesArray });
-                    console.log("State categories: ", this.state.categories)
+                    // console.log("State categories: ", this.state.categories)
                 })
     }
 
