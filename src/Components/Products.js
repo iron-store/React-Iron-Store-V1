@@ -8,15 +8,36 @@ class Products extends Component {
         };
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3000/product/')
-            .then(res => { console.log(res); return res.json() })
+    filterByCategory(categoryName) {
+        fetch(`http://localhost:3000/product/category-name/${categoryName}`)
+            .then(res => { return res.json() })
             .then(
                 products => {
                     let productsArray = products.map(product => {
                         return (
                             <div key={product._id} className="card col-xm-3 col-sm-5 col-md-4">
-                                <img src={product.picturePath} alt={product.name}/>
+                                <img src={product.picturePath} alt={product.name} />
+                                <h3>{product.name}</h3>
+                                <h4>{product.category}</h4>
+                                <p>${product.price}</p>
+                            </div>
+                        )
+                    })
+
+                    this.setState({ products: productsArray })
+                }
+            )
+    }
+
+    componentDidMount() {
+        fetch(`http://localhost:3000/product/`)
+            .then(res => { return res.json() })
+            .then(
+                products => {
+                    let productsArray = products.map(product => {
+                        return (
+                            <div key={product._id} className="card col-xm-3 col-sm-5 col-md-4">
+                                <img src={product.picturePath} alt={product.name} />
                                 <h3>{product.name}</h3>
                                 <h4>{product.category}</h4>
                                 <p>${product.price}</p>
