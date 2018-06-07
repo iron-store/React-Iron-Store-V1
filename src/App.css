@@ -14,3 +14,7 @@
   height: 20vw;
   width: 100%;
 }
+
+.hidden {
+  visibility: visible;
+}

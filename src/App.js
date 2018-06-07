@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-// import Login from './Components/Login';
-import Products from './Components/Products'
+import NavBar from './Components/NavBar';
+import Categories from './Components/Categories'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="container App">
-        <div className="row">
-          <Products />
-        </div>
+      <div className="App">
+        <NavBar className="container-fluid"/>
+        <Categories className="categories container" />
       </div>
     );
   }
