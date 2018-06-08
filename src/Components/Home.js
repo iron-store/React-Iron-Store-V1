@@ -3,7 +3,7 @@ import $ from 'jquery';
 import CategoryList from './CategoryList'
 import Products from './Products';
 
-class CategoryBar extends Component {
+class Home extends Component {
   constructor(props){
     super(props);
     this.updateFilter = React.createRef();
@@ -64,4 +64,4 @@ class CategoryBar extends Component {
   }
 }
 
-export default CategoryBar;
+export default Home;

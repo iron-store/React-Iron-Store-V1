@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ChildCategory from "./ChildCategory";
 
-class CategoryItem extends Component {
+class ParentCategory extends Component {
   constructor(){
     super();
     this.state = {
@@ -44,4 +44,4 @@ class CategoryItem extends Component {
   }
 }
 
-export default CategoryItem;
+export default ParentCategory;

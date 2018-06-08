@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CategoryItem from "./CategoryItem";
+import ParentCategory from "./ParentCategory";
 
 class CategoryList extends Component {
 
@@ -21,7 +21,7 @@ class CategoryList extends Component {
             return child.parent === category._id;
           })
           return (
-            <CategoryItem 
+            <ParentCategory 
               key={category.name} 
               category={category} 
               children={children}
