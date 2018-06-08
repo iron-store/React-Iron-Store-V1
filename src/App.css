@@ -23,3 +23,11 @@
   margin: 0;
   padding: 0;
 }
+
+.Category{
+  margin-left: 1vw;
+}
+
+.child-category{
+  margin-left: 2vw;
+}

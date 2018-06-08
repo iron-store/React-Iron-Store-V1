@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import CategoryItem from "./CategoryItem";
 
 class CategoryList extends Component {
-  // WE WILL CHANGE THIS ONE TO HANDLE THE CATEGORY CLICK
-  // deleteTodo(id){
-  //   this.props.onDelete(id)
-  // }
+
+  passTheCategoryName(categoryName){
+    this.props.passCatNameToList(categoryName);
+  }
 
   render() {
     let categoryItems;
@@ -22,11 +22,10 @@ class CategoryList extends Component {
           })
           return (
             <CategoryItem 
-            // WE WILL CHANGE THIS ONE INTO THE HANDLER COR THE CATEGORY CLICK
-            // onDelete={this.deleteTodo.bind(this)} 
-            key={category.name} 
-            category={category} 
-            children={children}
+              key={category.name} 
+              category={category} 
+              children={children}
+              onPassCategoryName={this.passTheCategoryName.bind(this)}
             />
           )
         });

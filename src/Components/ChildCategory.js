@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
 class ChildCategory extends Component {
-  // WE WILL CHANGE THIS ONE INTO THE CLICK HANDLER  
-  // deleteTodo(id){
-  //   this.props.onDelete(id);
-  // }
+
+  clickedChildCategory(categoryName){
+    this.props.onClickChildCategory(categoryName);
+  }
 
   render() {
     return (
-      <li className="Category">
+      <li className="Category child-category" onClick={this.clickedChildCategory.bind(this, this.props.category.name)}>
         <strong>{this.props.category.name}</strong>
-        {/* <a href="#" onClick={this.deleteTodo.bind(this, this.props.todo.id)}> X</a> */}
       </li>
     );
   }
