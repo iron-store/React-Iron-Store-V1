@@ -61,9 +61,9 @@ class Categories extends Component {
                                     <div>
                                         < button type="button" onClick={this.showSubCategories.bind(this, category)}>
                                             {category.name}
-                                            {this.name}
+                                            {/* {this.name} */}
                                         </button>
-                                        {this.state.subCategories}
+                                        {/* {this.state.subCategories} */}
                                     </div>
                                 }
                             </div>
